@@ -1,0 +1,12 @@
+*.log
+bin/
+deps/
+obj/
+node_modules/
+mods/
+reports/
+coverage/
+js/
+tmp/
+build/
+jspm_packages/

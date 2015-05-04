@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="apple-mobile-web-app-capable" content="YES"/>
+   <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta name="fragment" content="!" />
+
+   <title>tower</title>
+   <base href="/"></base>
+
+   <script src="lib/traceur-runtime.js"></script>
+   <script src="lib/es6-module-loader.src.js"></script>
+   <script src="lib/system.src.js"></script>
+   <script src="config.js"></script>
+   <script src="lib/angular2.dev.js"></script>
+      
+</head>
+
+<body>
+   <tower-app>
+      Loading...
+   </tower-app>
+
+   <script type="module">
+      System.config({
+        "transpiler": "typescript",
+        "typescriptOptions": {
+          "emitDecoratorMetadata": true
+        },
+        "paths": {
+          "*": "*.ts",
+          "github:*": "jspm_packages/github/*.js"
+        }
+      });
+      
+      System.import('./app')
+         .then(function(app){
+            app.main();
+         })
+         .catch(function (err){
+            console.error('ERROR: ', err)
+         });
+   </script>
+</body>
+
+</html>

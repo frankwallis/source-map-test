@@ -1,0 +1,10 @@
+<div class="app-container">
+   <div class="app-content">
+        <label>Enter your name</label>
+        <input type="text" 
+               [value]="inputName"
+               (change)="handleChangeName(seat, $event)"></input>
+        <button (click)="greet()">Press Me</button>
+        <p>{{greeting}}</p>
+   </div>
+</div>
