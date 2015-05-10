@@ -1,5 +1,8 @@
 System.config({
-  "transpiler": "traceur",
+  "transpiler": "typescript",
+  "typescriptOptions": {
+    "emitDecoratorMetadata": true
+  },
   "paths": {
     "*": "*.ts",
     "github:*": "jspm_packages/github/*.js"
@@ -8,9 +11,7 @@ System.config({
 
 System.config({
   "map": {
-    "traceur": "github:jmcriffey/bower-traceur@0.0.88",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
-    "typescript": "github:Arnavion/typescript-github@master"
+    "typescript": "github:mhegazy/typescript@v1.5-beta2"
   }
 });
 

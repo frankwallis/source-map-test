@@ -14,8 +14,8 @@
    <script src="lib/traceur-runtime.js"></script>
    <script src="lib/es6-module-loader.src.js"></script>
    <script src="lib/system.src.js"></script>
-   <script src="config.js"></script>
    <script src="lib/angular2.dev.js"></script>
+   <script src="config.js"></script>
       
 </head>
 
@@ -25,17 +25,6 @@
    </tower-app>
 
    <script type="module">
-      System.config({
-        "transpiler": "typescript",
-        "typescriptOptions": {
-          "emitDecoratorMetadata": true
-        },
-        "paths": {
-          "*": "*.ts",
-          "github:*": "jspm_packages/github/*.js"
-        }
-      });
-      
       System.import('./app')
          .then(function(app){
             app.main();
